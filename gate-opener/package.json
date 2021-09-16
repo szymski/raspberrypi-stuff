@@ -1,0 +1,15 @@
+{
+  "name": "gate-opener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "await-exec": "^0.1.2",
+    "express": "^4.17.1"
+  }
+}
