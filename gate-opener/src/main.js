@@ -41,8 +41,15 @@ client.on('connect', function () {
 
         }
     })
-})
+});
 
-client.on('message', function (topic, message) {
-    console.log("Gate open triggered");
-})
+client.on('message', async function (topic, message) {
+    if(topic === "rpi.open_gate") {
+        try {
+            console.log(`Running command from mqtt: ${CMD}`);
+            await exec(CMD);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+});
