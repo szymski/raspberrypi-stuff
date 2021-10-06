@@ -1,5 +1,7 @@
 const express = require("express");
 const exec = require("await-exec");
+const mqtt = require('mqtt');
+const client = mqtt.connect('mqtt://192.168.2.10');
 
 const PORT = process.env.PORT || 8000;
 const RECORDING_FILE = "record.iq";
@@ -30,3 +32,17 @@ app.get("/gate", async (req, res, next) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+// MQTT
+
+client.on('connect', function () {
+    client.subscribe('rpi.open_gate', function (err) {
+        if (!err) {
+
+        }
+    })
+})
+
+client.on('message', function (topic, message) {
+    console.log("Gate open triggered");
+})

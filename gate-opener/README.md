@@ -2,7 +2,7 @@ Gate opener
 ===========
 
 Gate opener is a very simple HTTP service for opening my parking lot gate using [rpitx](https://github.com/F5OEO/rpitx).
-It's configured for my purposes, if you want to use it for yourself, you'll have to change a few parameters, like the frequency of the radio signal and server port.
+It's configured for my purposes, if you want to use it for yourself, you'll have to change a few parameters, like the frequency of the radio signal and server port. It can be used to open parking lot gates, garage doors and all other stuff that uses radio transmission.
 
 ### Usage
 
